@@ -9,6 +9,13 @@ export const container = {
   maxWidth: "250px",
 };
 
+export const link = {
+  display: "flex",
+  alignItems: "center",
+  textDecoration: "none",
+  color: "inherit",
+};
+
 export const userImage = {
   borderRadius: "50%",
   width: "40px",

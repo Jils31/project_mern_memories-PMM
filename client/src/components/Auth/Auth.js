@@ -7,6 +7,7 @@ import "firebase/auth";
 import { AUTH } from "../../constants/actionTypes";
 import { Modal, TextField, Button } from "@material-ui/core";
 import * as styles from "./styles";
+import {Link} from 'react-router-dom'
 
 const Auth = () => {
   const dispatch = useDispatch();
@@ -52,12 +53,14 @@ const Auth = () => {
     <div>
       {user ? (
         <div style={styles.container}>
-          <img
-            src={user.photoURL}
-            alt={user.displayName}
-            style={styles.userImage}
-          />
-          <span style={styles.userName}>{user.displayName}</span>
+          <Link to="/profile" style={styles.link}>
+            <img
+              src={user.photoURL}
+              alt={user.displayName}
+              style={styles.userImage}
+            />
+            <span style={styles.userName}>{user.displayName}</span>
+          </Link>
           <button onClick={() => dispatch(logout())} style={styles.button}>
             Logout
           </button>
@@ -95,7 +98,7 @@ const Auth = () => {
                   onChange={(e) => setUsername(e.target.value)}
                 />
               )}
-              
+
               <TextField
                 label="Email"
                 type="email"
