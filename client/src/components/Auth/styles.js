@@ -33,6 +33,15 @@ export const button = {
   transition: "background-color 0.3s ease",
 };
 
+export const modal = {
+  background: "#fff",
+  padding: "30px",
+  borderRadius: "8px",
+  width: "400px",
+  margin: "100px auto",
+  textAlign: "center",
+};
+
 export const logoutButton = {
   ...button,
   backgroundColor: "#DB4437",
